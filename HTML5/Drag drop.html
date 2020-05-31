@@ -1,0 +1,56 @@
+<!--create webpages to demonstrate usage of web storage objects-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8"/>
+
+<style>
+#div1{
+	width:450px;
+	height:200px;
+	padding:10px;
+	border:1px solid blue;
+}
+</style>
+</head>
+
+<body>
+<h2>Drag and drop features in HTML5</h2>
+<hr/>
+<div id="div1"
+	ondrop="fn_drop(event)"
+	ondragover="fn_dragover(event)">
+</div>
+
+<h2 id="head1" draggable="true"
+	ondragstart="fn_drag(event)">
+Welcome to HTML5 APIs </h2>	
+
+<img id="img1"
+	src="images/img1.jpg" width="130" height="100" draggable="true" ondragstart="fn_drag(event)"/>
+	
+<script>
+
+function fn_drag(event)
+{
+event.dataTransfer.setData("x", event.target.id);
+}
+
+function fn_drop(event)
+{
+event.preventDefault();
+var id=event.dataTransfer.getData("x");
+var obj=document.getElementById(id);
+event.target.appendChild(obj);
+}
+
+function fn_dragover(event)
+{
+event.preventDefault();
+}
+
+</script>	
+</body>
+</html>

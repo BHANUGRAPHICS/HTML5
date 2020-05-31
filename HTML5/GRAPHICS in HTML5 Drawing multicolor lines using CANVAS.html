@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>Graphics in HTML5</h1>
+<hr />
+<canvas id="c1" height="300" width="300" style="border:2px solid blue;">
+</canvas>
+
+<script>
+var obj=document.getElementById("c1")
+var ctx=obj.getContext("2d");
+ctx.lineWidth=5;
+ctx.strokeStyle="red";
+ctx.lineCap="round";
+
+ctx.moveTo(50,20);
+ctx.lineTo(50,280);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle="green";
+ctx.moveTo(250,20);
+ctx.lineTo(250,280);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle="blue";
+ctx.moveTo(20,50);
+ctx.lineTo(280,50);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle="yellow";
+ctx.moveTo(20,250);
+ctx.lineTo(280,250);
+ctx.stroke();
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>Graphics in HTML5</h1>
+<hr />
+<canvas id="c1" height="400" width="400" style="border:2px solid blue;">
+</canvas>
+<!--Drawing text using canvas-->
+<script>
+var obj=document.getElementById("c1");
+var ctx=obj.getContext("2d");
+
+ctx.font="50px Arial";
+var grd=ctx.createLinearGradient(0,0,400,400);
+
+grd.addColorStop(0.2,"orange");
+grd.addColorStop(0.5,"white");
+grd.addColorStop(0.9,"green");
+
+ctx.lineWidth=2;
+ctx.fillStyle=grd;
+ctx.strokeText("India", 0,40);
+ctx.fillText("India", 0,40);
+
+</script>
+</body>
+</html>

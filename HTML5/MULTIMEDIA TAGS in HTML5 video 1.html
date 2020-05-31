@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>Multimedia Tags in HTML5</h1>
+<hr />
+
+<input type="button" value="play/pause" onclick="f1()"/>
+<input type="button" value="small size" onclick="f2(small)"/>
+<input type="button" value="medium size" onclick="f2(medium)"/>
+<input type="button" value="large size" onclick="f2(big)"/>
+<br><br>
+<video id="v1">
+<source src="video/Vegetable Manchurian.mp4" type="video/mp4">
+</video>
+<script>
+function f1()
+{
+	var obj=document.getElementById("v1");
+	if(obj.paused==true)
+	{
+	obj.play();
+	}
+	else
+	{
+	obj.pause();
+	}
+}
+
+function f2(arg)
+
+{
+	var obj=document.getElementById("v1");
+	
+	if(arg=="small"){obj.width="50";}
+	if(arg=="medium"){obj.width="100";}
+	if(arg=="big"){obj.width="200";}
+}
+</script>		
+	 
+</body>
+</html>

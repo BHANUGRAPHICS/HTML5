@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>Graphics in HTML5</h1>
+<hr />
+<canvas id="canvas1" height="450" width="180" style="border:2px solid blue;">
+</canvas>
+<!--Drawing Multiple circles using canvas-->
+<script>
+var c1=document.getElementById("canvas1");
+var ctx=c1.getContext("2d");
+
+ctx.lineWidth=5;
+ctx.fillStyle="Red";
+ctx.arc(90,80,50,0,2*Math.PI);
+ctx.stroke();
+ctx.fill();
+
+ctx.beginPath();
+ctx.fillStyle="yellow";
+ctx.arc(90,200,50,0,2*Math.PI);
+ctx.stroke();
+ctx.fill();
+
+ctx.beginPath();
+ctx.fillStyle="green";
+ctx.arc(90,320,50,0,2*Math.PI);
+ctx.stroke();
+ctx.fill();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8"/>
+</head>
+<body>
+<h3>Usage of SVG Tag</h3>
+<hr/>
+<svg id="svg1" height="400" width="500" style="border:2px solid blue;">
+
+<defs>
+<linearGradient id="grad1"
+	x1="0%" y1="0%"
+	x2="100%" y2="100%">
+
+<stop offset="0.2"
+	style="stop-color:Orange;"/>
+<stop offset="0.5"
+	style="stop-color:White;"/>	
+<stop offset="0.9"
+	style="stop-color:Green;"/>		
+</linearGradient>	
+
+<linearGradient id="grad2"
+	x1="0%" y1="0%"
+	x2="100%" y2="0%">
+
+<stop offset="0.2"
+	style="stop-color:Orange;"/>
+<stop offset="0.5"
+	style="stop-color:White;"/>	
+<stop offset="0.9"
+	style="stop-color:Green;"/>		
+</linearGradient>
+
+<radialGradient id="grad3"
+	x1="0%" y1="0%"
+	x2="0%" y2="0%">
+
+<stop offset="0.2"
+	style="stop-color:Green;"/>
+<stop offset="0.5"
+	style="stop-color:White;"/>	
+<stop offset="0.9"
+	style="stop-color:Orange;"/>		
+</radialGradient>		
+
+
+
+</defs>
+
+<rect x="40" y="20" height="100" width="420"
+	stroke="black" stroke-width="1" fill="url(#grad1)"/>
+
+<image x="200" y="24" height="90" width="90"
+		xlink:href="images/image.png"/>	
+
+<rect x="40" y="140" height="100" width="420"
+	stroke="black" stroke-width="1" fill="url(#grad2)"/>
+	
+<rect x="40" y="260" height="100" width="420"
+	stroke="black" stroke-width="1" fill="url(#grad3)"/>
+
+<text x="60" y="205" fill="url(#grad1)"
+		style="stroke:black; font-family:stencil Regular; font-size:50px;"> I LOVE MY INDIA </text>
+
+  
+</svg>
+</body>
+</html>

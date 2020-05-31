@@ -1,0 +1,40 @@
+<!-- create a webpage to demonstrate usage of Dialog tag -->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8"/>
+</head>
+<body>
+ <h3>Semantic tags in HTML5</h3>
+ <hr/>
+ 
+ <input type="button" onclick="fn_show()" value="show dialog"/>
+ <dialog id="d1">
+ <h3>Welcome to HTML5</h3>
+ <hr/>
+ 
+<p>
+This text exist inside the dialog box.....This paragraph contains some sample text. it is also having ....
+</p>
+<input type="button" onclick="fn_close()" value="close"/>
+</dialog>
+
+<script>
+function fn_show()
+
+{
+var obj=document.getElementById("d1");
+//obj.show();
+obj.showModal();
+}
+
+function fn_close()
+{
+var obj=document.getElementById("d1");
+obj.close();
+}
+</script>
+
+
+</body>
+</html>

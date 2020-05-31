@@ -1,0 +1,117 @@
+<!-- create a webpage to demonstrate usage of Dialog tag -->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8"/>
+</head>
+<body>
+ <h3>HTML5 Dialog Box Demo</h3>
+ <hr/>
+ 
+ <input type="button" onclick="fn_show()" value="Show Student details"/>
+ 
+ 
+ <dialog id="s1">
+	 <h3>Student Details</h3>
+
+	<table cellspacing="0" border="2" width="500">
+
+	<!-- Header Row -->
+
+	<tr>
+		<th>Student id</th>
+		<th>Student Name</th>
+		<th>Course Name</th>
+		<th>Duration</th>
+	</tr>
+
+	<!-- Data Row -->
+
+	<tr>
+		<td> 1026</td>
+		<td> balu</td>
+		<td> Html5&CSS3</td>
+		<td> 30days</td>
+	</tr>
+
+	<tr>
+		<td> 1027</td>
+		<td> chiru</td>
+		<td> JavaScript</td>
+		<td> 30days</td>
+	</tr>
+
+	<tr>
+		<td> 1028</td>
+		<td> Rajesh</td>
+		<td> Angular Js</td>
+		<td> 30days</td>
+	</tr>
+	<tr>
+		<td> 1029</td>
+		<td> Ramana</td>
+		<td>Bootstrap</td>
+		<td> 30days</td>
+	</tr>
+	<!-- Summary Row -->
+
+	<tr> 
+		<td colspan="4" align="center">
+		*Above students are joined in May 2017
+		 </td>
+	</tr>
+
+	</table> 
+	<br/>
+
+	<input type="button" onclick="fn_close()" value="close"/>
+</dialog>
+
+
+ <dialog id="c1"> 
+	 <h3>Course Details</h3>
+
+		 <ol>
+			<li>HTML5&CSS3</li>
+			<li>Java Script</li>
+			<li>Angular Js</li>
+			<li>Bootstrap</li>
+		</ol>
+	 
+	<br/>
+	<input type="button" onclick="fn2_close()" value="close"/>
+</dialog>
+
+<input type="button" onclick="fn2_show()" value="show Course details"/>
+
+<script>
+	function fn_show()
+
+	{
+		var obj=document.getElementById("s1");
+		//obj.show();
+		obj.showModal();
+	}
+
+	function fn_close()
+	{
+		var obj=document.getElementById("s1");
+		obj.close();
+	}
+
+	function fn2_show()
+
+	{
+		var obj=document.getElementById("c1");
+		//obj.show();
+		obj.showModal();
+	}
+
+	function fn2_close()
+	{
+		var obj=document.getElementById("c1");
+		obj.close();
+	}
+</script>
+</body>
+</html>

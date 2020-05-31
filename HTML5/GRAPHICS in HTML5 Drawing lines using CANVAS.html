@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>Graphics in HTML5</h1>
+<hr />
+<canvas id="c1" height="300" width="300" style="border:2px solid blue;">
+</canvas>
+<canvas id="c2" height="300" width="300" style="border:2px solid blue;">
+</canvas>
+
+<canvas id="c3" height="300" width="300" style="border:2px solid blue;">
+</canvas>
+
+<script>
+var obj=document.getElementById("c1")
+var ctx=obj.getContext("2d");
+ctx.linewidth=5;
+
+ctx.moveTo(0,100);
+ctx.lineTo(200,100);
+ctx.stroke();
+
+ctx.moveTo(0,200);
+ctx.lineTo(300,200);
+ctx.stroke();
+
+/*--------------*/
+
+var obj=document.getElementById("c2")
+var ctx=obj.getContext("2d");
+ctx.strokeStyle="red";
+ctx.lineWidth=20;
+ctx.lineJoin="round";
+ctx.lineCap="round";
+ctx.moveTo(50,250);
+ctx.lineTo(50,50);
+ctx.lineTo(180,250);
+ctx.lineTo(180,50);
+ctx.stroke();
+
+/*--------------*/
+
+var obj=document.getElementById("c3")
+var ctx=obj.getContext("2d");
+ctx.strokeStyle="red";
+ctx.lineWidth=20;
+ctx.lineJoin="round";
+ctx.lineCap="round";
+ctx.moveTo(30,10);
+ctx.lineTo(80,40);
+ctx.lineTo(40,80);
+ctx.lineTo(100,130);
+ctx.lineTo(100,150);
+ctx.lineTo(30,150);
+ctx.lineTo(30,11);
+ctx.stroke();
+
+
+
+</script>
+</body>
+</html>
